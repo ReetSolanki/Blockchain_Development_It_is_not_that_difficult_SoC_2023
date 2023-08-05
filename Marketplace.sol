@@ -17,7 +17,7 @@ contract Marketplace {
         uint id,
         string name,
         uint price,
-        address payable owner,     // Variables starting with underscore is a convention to show that they are local variables and not state variables.
+        address payable owner,     
         bool purchased
     );
 
@@ -36,7 +36,7 @@ contract Marketplace {
 
     function createProduct(string memory _name, uint _price) public {
         // Require a valid name
-        require(bytes(_name).length > 0);
+        require(bytes(_name).length > 0);           // Variables starting with underscore is a convention to show that they are local variables and not state variables.
         // Require a valid price
         require(_price > 0);
         // Increament product count
